@@ -1,0 +1,52 @@
+# 📑 PRD — Gestion et Interaction des Audios sur la Map
+
+## 🎯 Contexte & Vision
+L’application permet aux utilisateurs d’interagir via des messages audio géolocalisés.  
+Chaque audio devient une “empreinte sonore” qui suit la position de son émetteur sur une carte en temps réel.  
+Objectif : une expérience **simple, fluide et intuitive**.
+
+---
+
+## 👥 User Stories
+1. **Upload audio unique**  
+   En tant qu’utilisateur, je peux uploader **un seul audio à la fois**, remplace l'audio s'il existe par le nouveau.
+
+2. **Interaction via long press**  
+   - Si je maintiens un **appui long** sur un audio :  
+     - Si c’est le mien → option de **suppression**.  
+     - Si c’est celui d’un autre utilisateur → option de **signalement**.  
+
+3. **Suivi dynamique sur la map**  
+   L’audio suit en temps réel le déplacement de son émetteur sur la carte.
+
+---
+
+## 🔑 Fonctionnalités principales 
+
+###  Long press dialog
+- Détection : appui > 1,5 sec.  
+- Cas :  
+  - **Propre audio** → options `Supprimer` / `Annuler`.  
+  - **Autre audio** → options `Signaler` / `Annuler`.  
+
+###  Déplacement sur la carte
+- Mise à jour GPS toutes les **X secondes** (ex. 3s).  
+
+---
+---
+
+## ⚙️ Règles et Contraintes
+- 1 audio actif par utilisateur.  
+- Suppression = disparition instantanée (client + serveur).  
+- Signalement → log côté serveur (`id audio`, `id signalant`, `raison`).  
+- Suivi GPS → nécessite autorisation utilisateur.
+
+---
+
+## 📐 Critères d’acceptation
+ 
+2. Appui long → **dialog correct** selon propriétaire.  
+3. Déplacement visible sous 10 secondes max par rapport à la position réelle.  
+4. Suppression → disparition immédiate pour tous.  
+
+---

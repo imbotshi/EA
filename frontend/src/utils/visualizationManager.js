@@ -301,4 +301,4 @@ class ParticleSystem {
   dispose() {
     this.stop()
   }
-} 
+}

@@ -97,9 +97,14 @@
           <button class="action-btn share" 
                   @click="shareRecording" 
                   @touchstart="handleHaptic"
-                  :class="{ 'disabled': !canShare }"
-                  :disabled="!canShare">
-            <img src="/share.svg" alt="Partager" width="29" height="29" />
+                  :class="{ 'disabled': !canShare || isUploading, 'loading': isUploading }"
+                  :disabled="!canShare || isUploading">
+            <template v-if="isUploading">
+              <span class="spinner" aria-label="Chargement"></span>
+            </template>
+            <template v-else>
+              <img src="/share.svg" alt="Partager" width="29" height="29" />
+            </template>
           </button>
         </div>
       </div>
@@ -148,6 +153,8 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
+import { useRouter } from 'vue-router'
+import { getUserLocation, getIpApproxLocation } from '../services/voiceNotesService.js'
 import WaveSurfer from 'wavesurfer.js'
 import RecordPlugin from 'wavesurfer.js/dist/plugins/record.esm.js'
 
@@ -158,11 +165,12 @@ const props = defineProps({
 })
 
 // Emits
-const emit = defineEmits(['close'])
+const emit = defineEmits(['close', 'audio-uploaded'])
 
 // WaveSurfer instances
 let wavesurfer = null
 let record = null
+let lastRecordedBlob = null
 
 // États de l'enregistrement
 const recordingState = ref('ready') // 'ready', 'recording', 'paused', 'finished'
@@ -189,6 +197,10 @@ const tooltipPosition = ref({})
 const showToastFlag = ref(false)
 const toastMessage = ref('')
 const toastType = ref('info')
+
+// Upload state and router
+const isUploading = ref(false)
+const router = useRouter()
 
 // Computed properties
 const currentIcon = computed(() => {
@@ -305,6 +317,7 @@ async function initWaveSurfer() {
     
     // Create audio URL for playback
     const audioUrl = URL.createObjectURL(blob)
+    lastRecordedBlob = blob
     wavesurfer.loadBlob(blob)
     
     showToast('Enregistrement terminé ! Votre voix a été enregistrée avec succès.', 'success')
@@ -398,20 +411,63 @@ function deleteSelection() {
 }
 
 async function shareRecording() {
-  if (recordingState.value !== 'finished') return
-  
+  if (recordingState.value !== 'finished' || !lastRecordedBlob || isUploading.value) return
+
+  isUploading.value = true
   try {
-    // Get the recorded blob
-    const blob = await wavesurfer.exportPCM()
-    const audioBlob = new Blob([blob], { type: 'audio/wav' })
-    
-    // Upload to Supabase (you'll need to implement this)
-    // await uploadToSupabase(audioBlob)
-    
+    // 1) Try geolocation
+    let lat = 0
+    let lng = 0
+    try {
+      const pos = await getUserLocation()
+      lat = pos.latitude
+      lng = pos.longitude
+    } catch (e) {
+      console.warn('[Share] GPS failed, trying IP-based location:', e)
+      // 2) Try IP-based approx location
+      try {
+        const ip = await getIpApproxLocation()
+        lat = ip.latitude
+        lng = ip.longitude
+      } catch (e2) {
+        console.warn('[Share] IP-based location failed, using Cameroon center:', e2)
+        // 3) Fallback Cameroon center
+        lat = 5.5
+        lng = 12.5
+      }
+    }
+
+    // Build payload
+    const form = new FormData()
+    form.append('file', lastRecordedBlob, `voice-${Date.now()}.webm`)
+    form.append('title', 'Note vocale')
+    form.append('user', 'Utilisateur')
+    form.append('duration', String(Math.round(totalTime.value)))
+    form.append('lat', String(lat))
+    form.append('lng', String(lng))
+    form.append('description', '')
+    form.append('category', 'Général')
+
+    const resp = await fetch('/api/audios', {
+      method: 'POST',
+      body: form
+    })
+
+    if (!resp.ok) throw new Error('Upload failed')
+    const data = await resp.json()
+
+    emit('audio-uploaded', data?.note || null)
     showToast('Enregistrement partagé avec succès ! Votre voix est maintenant disponible pour la communauté.', 'success')
+    // Inform map to refresh and navigate to it
+    try {
+      window.dispatchEvent(new CustomEvent('audios-updated'))
+    } catch {}
+    await router.push('/')
   } catch (error) {
     console.error('Share error:', error)
     showToast('Erreur lors du partage. Veuillez réessayer dans quelques instants.', 'error')
+  } finally {
+    isUploading.value = false
   }
 }
 
@@ -888,6 +944,24 @@ onUnmounted(() => {
   display: block;
   margin: 0;
   flex-shrink: 0;
+}
+
+/* Loading state for share button */
+.action-btn.share.loading {
+  opacity: 0.85;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255,255,255,0.4);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
 

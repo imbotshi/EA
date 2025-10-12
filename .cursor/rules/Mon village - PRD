@@ -1,0 +1,30 @@
+# PRD - Carte "Mon village"
+
+## Objectif
+
+Afficher sur la carte (onglet "Mon village") toutes les radios (onglet "Radio") et les podcasts (onglet "Podcast"), tous les notes vocales (section "Recorder" appelé par le clic sur la bouton fab-record).
+
+## Exigences
+
+1. **Récupération des données**
+
+   * Radios depuis l’onglet "Radio"
+   * Podcasts depuis l’onglet "Podcast"
+   * Chaque élément contient : id, titre, type (radio/podcast), url du flux, coordonnées (lat, long), image.
+
+2. **Affichage sur la carte**
+
+   * Carte interactive (zoom, déplacement).
+   * Radios et Podcasts, notes vocales représentés par des icônes différentes.
+   * Clic sur une icône → lance l'audio existant.
+
+3. **Comportement**
+
+   * L’onglet "Mon village" charge la carte directement.
+   * Bouton "Lire" au centre des icônes de la map, lance le lecteur audio existant.
+   * Si trop d’éléments proches → regroupement (clustering).
+
+## Livrables
+
+* Connexion de la map aux données Radio & Podcast.
+* Markers cliquables et fonctionnels.

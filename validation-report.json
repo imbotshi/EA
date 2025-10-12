@@ -1,0 +1,607 @@
+{
+  "total": 60,
+  "success": 1,
+  "failed": 59,
+  "details": [
+    {
+      "station": "Top Congo FM",
+      "country": "RDC",
+      "id": "99oEZY6q",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://mpbradio.ice.infomaniak.ch/topcongo3-128.mp3",
+      "url": "https://radio.garden/api/ara/content/listen/99oEZY6q/channel.mp3"
+    },
+    {
+      "station": "Radio Okapi",
+      "country": "RDC",
+      "id": "Jo6CKzEH",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - http://rs1.radiostreamer.com:8000/;stream/1",
+      "url": "https://radio.garden/api/ara/content/listen/Jo6CKzEH/channel.mp3"
+    },
+    {
+      "station": "Radio Digital Congo",
+      "country": "RDC",
+      "id": "9wYTkeg5",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://radiodigitalcongofm.ice.infomaniak.ch/digitalcongofm-96.mp3",
+      "url": "https://radio.garden/api/ara/content/listen/9wYTkeg5/channel.mp3"
+    },
+    {
+      "station": "Radio Maria RDC",
+      "country": "RDC",
+      "id": "radio-maria-rdc",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/radio-maria-rdc/channel.mp3"
+    },
+    {
+      "station": "RTS Dakar 94.5 FM",
+      "country": "Sénégal",
+      "id": "4oWr9XO7",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://stream.zeno.fm/cbff588f03duv",
+      "url": "https://radio.garden/api/ara/content/listen/4oWr9XO7/channel.mp3"
+    },
+    {
+      "station": "Rewmi FM",
+      "country": "Sénégal",
+      "id": "GVAFqjMC",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://stream.zeno.fm/nkzsqg16t8quv",
+      "url": "https://radio.garden/api/ara/content/listen/GVAFqjMC/channel.mp3"
+    },
+    {
+      "station": "Radio Dakar City",
+      "country": "Sénégal",
+      "id": "FBqjFK6J",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://stream.radiodakarcity.com/",
+      "url": "https://radio.garden/api/ara/content/listen/FBqjFK6J/channel.mp3"
+    },
+    {
+      "station": "H24 Senegal",
+      "country": "Sénégal",
+      "id": "pbiwLjg8",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://listen.senemultimedia.net:8072/stream",
+      "url": "https://radio.garden/api/ara/content/listen/pbiwLjg8/channel.mp3"
+    },
+    {
+      "station": "Radio Urum-Bi",
+      "country": "Sénégal",
+      "id": "BdYoSehp",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://listen.radioking.com/radio/4735/stream/12887",
+      "url": "https://radio.garden/api/ara/content/listen/BdYoSehp/channel.mp3"
+    },
+    {
+      "station": "Radio Nostalgie 101.1",
+      "country": "Côte d'Ivoire",
+      "id": "cjp2Bftn",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - http://213.136.96.14:8000/nostalgie2.mp3",
+      "url": "https://radio.garden/api/ara/content/listen/cjp2Bftn/channel.mp3"
+    },
+    {
+      "station": "RTI Radio 1",
+      "country": "Côte d'Ivoire",
+      "id": "RTI1-abidjan",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/RTI1-abidjan/channel.mp3"
+    },
+    {
+      "station": "Fréquence 2",
+      "country": "Côte d'Ivoire",
+      "id": "frequence2-abidjan",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/frequence2-abidjan/channel.mp3"
+    },
+    {
+      "station": "Oméga FM 103.9",
+      "country": "Burkina Faso",
+      "id": "8EtpXCqp",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://listen.radioking.com/radio/395347/stream/447148",
+      "url": "https://radio.garden/api/ara/content/listen/8EtpXCqp/channel.mp3"
+    },
+    {
+      "station": "RTB Radio Burkina",
+      "country": "Burkina Faso",
+      "id": "rtb-ouaga",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/rtb-ouaga/channel.mp3"
+    },
+    {
+      "station": "RTT Niger",
+      "country": "Niger",
+      "id": "6n62ZcnI",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://stream.zeno.fm/y1xvpw44hf1tv",
+      "url": "https://radio.garden/api/ara/content/listen/6n62ZcnI/channel.mp3"
+    },
+    {
+      "station": "Alternative FM",
+      "country": "Niger",
+      "id": "alternative-niger",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/alternative-niger/channel.mp3"
+    },
+    {
+      "station": "Nostalgie Guinée FM 98.2",
+      "country": "Guinée",
+      "id": "WcyRTis8",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://stream.zeno.fm/85whutype7duv",
+      "url": "https://radio.garden/api/ara/content/listen/WcyRTis8/channel.mp3"
+    },
+    {
+      "station": "RTG Radio Guinée",
+      "country": "Guinée",
+      "id": "rtg-conakry",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/rtg-conakry/channel.mp3"
+    },
+    {
+      "station": "Equinoxe Radio",
+      "country": "Cameroun",
+      "id": "equinoxe-radio",
+      "success": true,
+      "status": 200,
+      "contentType": "audio/mpeg",
+      "message": "Flux audio valide",
+      "url": "https://listen.radioking.com/radio/39218/stream/76118"
+    },
+    {
+      "station": "Balafon Radio",
+      "country": "Cameroun",
+      "id": "balafon-radio",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/8XZ9Yz9f/channel.mp3"
+    },
+    {
+      "station": "CRTV Radio",
+      "country": "Cameroun",
+      "id": "crtv-yaounde",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/crtv-yaounde/channel.mp3"
+    },
+    {
+      "station": "Sweet FM",
+      "country": "Cameroun",
+      "id": "sweet-fm-douala",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/sweet-fm-douala/channel.mp3"
+    },
+    {
+      "station": "Urban FM 104.5",
+      "country": "Gabon",
+      "id": "HSnNudCF",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://studio.webradio.solutions:7013/stream",
+      "url": "https://radio.garden/api/ara/content/listen/HSnNudCF/channel.mp3"
+    },
+    {
+      "station": "RTG1 Gabon",
+      "country": "Gabon",
+      "id": "rtg1-libreville",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/rtg1-libreville/channel.mp3"
+    },
+    {
+      "station": "Radio Maria Congo 88.7",
+      "country": "Congo-Brazzaville",
+      "id": "1q6MUQjm",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - http://dreamsiteradiocp.com:8120/;",
+      "url": "https://radio.garden/api/ara/content/listen/1q6MUQjm/channel.mp3"
+    },
+    {
+      "station": "RTN Congo",
+      "country": "Congo-Brazzaville",
+      "id": "rtn-brazzaville",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/rtn-brazzaville/channel.mp3"
+    },
+    {
+      "station": "Radio Ndeke Luka 100.8",
+      "country": "RCA",
+      "id": "ouijU0U4",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - http://stream.radiondekeluka.org:8001/ndekeluka",
+      "url": "https://radio.garden/api/ara/content/listen/ouijU0U4/channel.mp3"
+    },
+    {
+      "station": "Radio Centrafrique",
+      "country": "RCA",
+      "id": "rca-bangui",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/rca-bangui/channel.mp3"
+    },
+    {
+      "station": "Radio Ndarason Int 107.1",
+      "country": "Tchad",
+      "id": "eA2KCtuO",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://c26.radioboss.fm:8679/stream",
+      "url": "https://radio.garden/api/ara/content/listen/eA2KCtuO/channel.mp3"
+    },
+    {
+      "station": "RNT Tchad",
+      "country": "Tchad",
+      "id": "rnt-ndjamena",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/rnt-ndjamena/channel.mp3"
+    },
+    {
+      "station": "Radio Rwanda 100.7",
+      "country": "Rwanda",
+      "id": "mRwLKaWe",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://listen.rba.co.rw:8008/rwanda/;",
+      "url": "https://radio.garden/api/ara/content/listen/mRwLKaWe/channel.mp3"
+    },
+    {
+      "station": "Kiss FM Rwanda",
+      "country": "Rwanda",
+      "id": "kiss-fm-kigali",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/kiss-fm-kigali/channel.mp3"
+    },
+    {
+      "station": "Radio Isanganiro",
+      "country": "Burundi",
+      "id": "U7DPCuhc",
+      "success": false,
+      "status": 302,
+      "contentType": "text/html; charset=utf-8",
+      "message": "Redirection 302 - https://isanganiro.ice.infomaniak.ch/isanganiro-64.mp3?_=1",
+      "url": "https://radio.garden/api/ara/content/listen/U7DPCuhc/channel.mp3"
+    },
+    {
+      "station": "RTNB Burundi",
+      "country": "Burundi",
+      "id": "rtnb-bujumbura",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/rtnb-bujumbura/channel.mp3"
+    },
+    {
+      "station": "Metro FM",
+      "country": "Nigeria",
+      "id": "metro-fm-lagos",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/metro-fm-lagos/channel.mp3"
+    },
+    {
+      "station": "Wazobia FM",
+      "country": "Nigeria",
+      "id": "wazobia-fm-lagos",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/wazobia-fm-lagos/channel.mp3"
+    },
+    {
+      "station": "Cool FM",
+      "country": "Nigeria",
+      "id": "cool-fm-lagos",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/cool-fm-lagos/channel.mp3"
+    },
+    {
+      "station": "Rhythm FM",
+      "country": "Nigeria",
+      "id": "rhythm-fm-lagos",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/rhythm-fm-lagos/channel.mp3"
+    },
+    {
+      "station": "Citi FM",
+      "country": "Ghana",
+      "id": "citi-fm-accra",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/citi-fm-accra/channel.mp3"
+    },
+    {
+      "station": "Joy FM",
+      "country": "Ghana",
+      "id": "joy-fm-accra",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/joy-fm-accra/channel.mp3"
+    },
+    {
+      "station": "Peace FM",
+      "country": "Ghana",
+      "id": "peace-fm-accra",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/peace-fm-accra/channel.mp3"
+    },
+    {
+      "station": "Capital FM",
+      "country": "Kenya",
+      "id": "capital-fm-nairobi",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/capital-fm-nairobi/channel.mp3"
+    },
+    {
+      "station": "Kiss FM Kenya",
+      "country": "Kenya",
+      "id": "kiss-fm-nairobi",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/kiss-fm-nairobi/channel.mp3"
+    },
+    {
+      "station": "Classic 105",
+      "country": "Kenya",
+      "id": "classic-fm-nairobi",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/classic-fm-nairobi/channel.mp3"
+    },
+    {
+      "station": "5FM",
+      "country": "Afrique du Sud",
+      "id": "5fm-johannesburg",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/5fm-johannesburg/channel.mp3"
+    },
+    {
+      "station": "Metro FM SA",
+      "country": "Afrique du Sud",
+      "id": "metro-fm-johannesburg",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/metro-fm-johannesburg/channel.mp3"
+    },
+    {
+      "station": "KFM 94.5",
+      "country": "Afrique du Sud",
+      "id": "kfm-cape-town",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/kfm-cape-town/channel.mp3"
+    },
+    {
+      "station": "Good Hope FM",
+      "country": "Afrique du Sud",
+      "id": "good-hope-fm",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/good-hope-fm/channel.mp3"
+    },
+    {
+      "station": "Medi 1",
+      "country": "Maroc",
+      "id": "medi1-casablanca",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/medi1-casablanca/channel.mp3"
+    },
+    {
+      "station": "Hit Radio",
+      "country": "Maroc",
+      "id": "hit-radio-casablanca",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/hit-radio-casablanca/channel.mp3"
+    },
+    {
+      "station": "Atlantic Radio",
+      "country": "Maroc",
+      "id": "atlantic-radio-rabat",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/atlantic-radio-rabat/channel.mp3"
+    },
+    {
+      "station": "Nile FM",
+      "country": "Égypte",
+      "id": "nile-fm-cairo",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/nile-fm-cairo/channel.mp3"
+    },
+    {
+      "station": "Nogoum FM",
+      "country": "Égypte",
+      "id": "nogoum-fm-cairo",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/nogoum-fm-cairo/channel.mp3"
+    },
+    {
+      "station": "Shems FM",
+      "country": "Tunisie",
+      "id": "shems-fm-tunis",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/shems-fm-tunis/channel.mp3"
+    },
+    {
+      "station": "Mosaïque FM",
+      "country": "Tunisie",
+      "id": "mosaique-fm-tunis",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/mosaique-fm-tunis/channel.mp3"
+    },
+    {
+      "station": "Radio Algérie",
+      "country": "Algérie",
+      "id": "radio-algerie-alger",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/radio-algerie-alger/channel.mp3"
+    },
+    {
+      "station": "Chaîne 3",
+      "country": "Algérie",
+      "id": "chaine3-alger",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/chaine3-alger/channel.mp3"
+    },
+    {
+      "station": "RFI Afrique",
+      "country": "International",
+      "id": "rfi-afrique",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/rfi-afrique/channel.mp3"
+    },
+    {
+      "station": "Africa Radio",
+      "country": "International",
+      "id": "africa-radio-paris",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/africa-radio-paris/channel.mp3"
+    },
+    {
+      "station": "BBC World Service",
+      "country": "International",
+      "id": "bbc-world-service",
+      "success": false,
+      "status": 404,
+      "contentType": "application/json; charset=utf-8",
+      "message": "Status 404 - Type: application/json; charset=utf-8",
+      "url": "https://radio.garden/api/ara/content/listen/bbc-world-service/channel.mp3"
+    }
+  ]
+}

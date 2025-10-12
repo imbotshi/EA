@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test UserProfileAvatar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #09174C 0%, #1a2b5c 100%);
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        
+        .test-container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background: #f0f0f0;
+            border-radius: 12px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        
+        /* Styles du profil utilisateur basé sur Figma */
+        .user-profile-avatar {
+            position: absolute;
+            width: 121px;
+            height: 147px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            left: 157px;
+            top: 211px;
+        }
+        
+        .user-profile-avatar:hover {
+            transform: scale(1.05);
+        }
+        
+        .blur-effect-blue {
+            position: absolute;
+            left: 0px;
+            top: 27px;
+            width: 121px;
+            height: 121px;
+            background: linear-gradient(146deg, #0F69F1 0%, #FF80CC 134.83%);
+            border-radius: 50%;
+            filter: blur(18px);
+        }
+        
+        .blur-effect-gradient {
+            position: absolute;
+            left: 25px;
+            top: 36px;
+            width: 62px;
+            height: 62px;
+            background: linear-gradient(324deg, #8A30E3 1.35%, #EE6BA1 56.42%, #EAC893 96.38%);
+            border-radius: 50%;
+            filter: blur(18px);
+        }
+        
+        .effect-circle-outer {
+            position: absolute;
+            left: 2px;
+            top: 0px;
+            width: 118px;
+            height: 118px;
+            background: rgba(4, 59, 248, 0.16);
+            border-radius: 50%;
+            animation: pulseOuter 3s ease-in-out infinite;
+        }
+        
+        .effect-circle-inner {
+            position: absolute;
+            left: 8px;
+            top: 6px;
+            width: 106px;
+            height: 106px;
+            background: rgba(4, 59, 248, 0.16);
+            border-radius: 50%;
+            animation: pulseInner 3s ease-in-out infinite 0.5s;
+        }
+        
+        .user-profile {
+            position: absolute;
+            left: 25px;
+            top: 22px;
+            width: 72px;
+            height: 94px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4.825px;
+        }
+        
+        .profile-container {
+            display: flex;
+            padding: 3.619px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 36px;
+        }
+        
+        .profile-image {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 2.4px solid #F10F47;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            border-color: #FF4775;
+            box-shadow: 0 0 20px rgba(241, 15, 71, 0.4);
+        }
+        
+        @keyframes pulseOuter {
+            0%, 100% {
+                opacity: 0.16;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.25;
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes pulseInner {
+            0%, 100% {
+                opacity: 0.16;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(1.08);
+            }
+        }
+        
+        .info {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h1>Test du Profil Utilisateur Eclairia</h1>
+        <p>Cliquez sur le profil pour tester l'interaction</p>
+    </div>
+    
+    <div class="test-container">
+        <!-- Profil utilisateur avec effets Figma -->
+        <div class="user-profile-avatar" onclick="handleProfileClick()">
+            <!-- Effets de blur en arrière-plan -->
+            <div class="blur-effect-blue"></div>
+            <div class="blur-effect-gradient"></div>
+            
+            <!-- Cercles d'effets avec opacités -->
+            <div class="effect-circle-outer"></div>
+            <div class="effect-circle-inner"></div>
+            
+            <!-- Profil utilisateur principal -->
+            <div class="user-profile">
+                <div class="profile-container">
+                    <img 
+                        src="/profile/default.png"
+                        alt="Profil utilisateur"
+                        class="profile-image"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function handleProfileClick() {
+            alert('🎵 Profil utilisateur cliqué ! Fonctionnalité activée.');
+            console.log('Profil utilisateur activé');
+        }
+        
+        // Ajout d'effets visuels au clic
+        document.querySelector('.user-profile-avatar').addEventListener('click', function() {
+            this.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1.05)';
+            }, 200);
+        });
+    </script>
+</body>
+</html>

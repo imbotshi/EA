@@ -1,93 +1,18 @@
 [
-  {
-    "id": "99oEZY6q",
-    "name": "Top Congo FM",
-    "country": "RDC",
-    "city": "Kinshasa",
-    "stream": "https://radio.garden/api/ara/content/listen/99oEZY6q/channel.mp3",
-    "genre": "Musique/Variétés",
-    "language": "Français/Lingala"
-  },
-  {
-    "id": "Jo6CKzEH",
-    "name": "Radio Okapi",
-    "country": "RDC",
-    "city": "Kinshasa",
-    "stream": "https://radio.garden/api/ara/content/listen/Jo6CKzEH/channel.mp3",
-    "genre": "Info/Actualités",
-    "language": "Français/Lingala"
-  },
-  {
-    "id": "9wYTkeg5",
-    "name": "Radio Digital Congo",
-    "country": "RDC",
-    "city": "Kinshasa",
-    "stream": "https://radio.garden/api/ara/content/listen/9wYTkeg5/channel.mp3",
-    "genre": "Généraliste",
-    "language": "Français"
-  },
-  {
-    "id": "GVAFqjMC",
-    "name": "Rewmi FM",
-    "country": "Sénégal",
-    "city": "Dakar",
-    "stream": "https://radio.garden/api/ara/content/listen/GVAFqjMC/channel.mp3",
-    "genre": "Info/Musique",
-    "language": "Français/Wolof"
-  },
-  {
-    "id": "FBqjFK6J",
-    "name": "Radio Dakar City",
-    "country": "Sénégal",
-    "city": "Dakar",
-    "stream": "https://radio.garden/api/ara/content/listen/FBqjFK6J/channel.mp3",
-    "genre": "Musique urbaine",
-    "language": "Français"
-  },
-  {
-    "id": "pbiwLjg8",
-    "name": "H24 Senegal",
-    "country": "Sénégal",
-    "city": "Dakar",
-    "stream": "https://radio.garden/api/ara/content/listen/pbiwLjg8/channel.mp3",
-    "genre": "Info continue",
-    "language": "Français"
-  },
-  {
-    "id": "BdYoSehp",
-    "name": "Radio Urum-Bi",
-    "country": "Sénégal",
-    "city": "Dakar",
-    "stream": "https://radio.garden/api/ara/content/listen/BdYoSehp/channel.mp3",
-    "genre": "Musique traditionnelle",
-    "language": "Wolof"
-  }
-  ,
-  {
-    "id": "8N8Gru0O",
-    "name": "Radio Bonne Nouvelle FM 99.6",
-    "country": "Cameroun",
-    "city": "Douala",
-    "stream": "https://radio.garden/api/ara/content/listen/8N8Gru0O/channel.mp3",
-    "genre": "Religieux / Général",
-    "language": "Français"
-  },
-  {
-    "id": "xEEkHWU5",
-    "name": "Balla Radio",
-    "country": "Cameroun",
-    "city": "Yaoundé",
-    "stream": "https://radio.garden/api/ara/content/listen/xEEkHWU5/channel.mp3",
-    "genre": "Musique",
-    "language": "Français"
-  },
-  {
-    "id": "wVjn9ASB",
-    "name": "RVC Radio Voice of the Cross",
-    "country": "Cameroun",
-    "city": "Yaoundé",
-    "stream": "https://radio.garden/api/ara/content/listen/wVjn9ASB/channel.mp3",
-    "genre": "Religieux",
-    "language": "Français"
-  }
+  {"id":"99oEZY6q","name":"Top Congo FM","country":"RDC","city":"Kinshasa","stream":"https://mpbradio.ice.infomaniak.ch/topcongo3-128.mp3","genre":"Musique/Variétés","language":"Français/Lingala"},
+  {"id":"Jo6CKzEH","name":"Radio Okapi","country":"RDC","city":"Goma","stream":"http://rs1.radiostreamer.com:8000/;stream/1","genre":"Info/Actualités","language":"Français/Lingala"},
+  
+  {"id":"4oWr9XO7","name":"RTS Dakar 94.5 FM","country":"Sénégal","city":"Dakar","stream":"https://stream.zeno.fm/cbff588f03duv","genre":"Public/Info","language":"Français/Wolof"},
+  
+  {"id":"cjp2Bftn","name":"Radio Nostalgie 101.1","country":"Côte d'Ivoire","city":"Abidjan","stream":"http://213.136.96.14:8000/nostalgie2.mp3","genre":"Musique","language":"Français"},
+  {"id":"8EtpXCqp","name":"Oméga FM 103.9","country":"Burkina Faso","city":"Ouagadougou","stream":"https://listen.radioking.com/radio/395347/stream/447148","genre":"Info/Musique","language":"Français/Mooré"},
+  {"id":"6n62ZcnI","name":"RTT Niger","country":"Niger","city":"Niamey","stream":"https://stream.zeno.fm/y1xvpw44hf1tv","genre":"Info","language":"Français/Hausa"},
+  {"id":"WcyRTis8","name":"Nostalgie Guinée FM 98.2","country":"Guinée","city":"Conakry","stream":"https://stream.zeno.fm/85whutype7duv","genre":"Musique","language":"Français"},
+  {"id":"equinoxe-radio","name":"Equinoxe Radio","country":"Cameroun","city":"Douala","stream":"https://listen.radioking.com/radio/39218/stream/76118","genre":"Info/Musique","language":"Français"},
+  {"id":"HSnNudCF","name":"Urban FM 104.5","country":"Gabon","city":"Libreville","stream":"https://studio.webradio.solutions:7013/stream","genre":"Urbain/Musique","language":"Français"},
+  {"id":"1q6MUQjm","name":"Radio Maria Congo 88.7","country":"Congo-Brazzaville","city":"Brazzaville","stream":"http://dreamsiteradiocp.com:8120/;","genre":"Religieux","language":"Français"},
+  {"id":"ouijU0U4","name":"Radio Ndeke Luka 100.8","country":"RCA","city":"Bangui","stream":"http://stream.radiondekeluka.org:8001/ndekeluka","genre":"Info","language":"Français/Sango"},
+  {"id":"eA2KCtuO","name":"Radio Ndarason Int 107.1","country":"Tchad","city":"N'Djamena","stream":"https://c26.radioboss.fm:8679/stream","genre":"Info","language":"Français/Local"},
+  {"id":"U7DPCuhc","name":"Radio Isanganiro","country":"Burundi","city":"Bujumbura","stream":"https://isanganiro.ice.infomaniak.ch/isanganiro-64.mp3?_=1","genre":"Info","language":"Français/Kirundi"},
+  {"id":"xEEkHWU5","name":"Balla Radio","country":"Cameroun","city":"Yaoundé","stream":"https://radio.garden/api/ara/content/listen/xEEkHWU5/channel.mp3","genre":"Musique camerounaise","language":"Français"}
 ]

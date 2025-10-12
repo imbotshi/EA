@@ -24,8 +24,8 @@
 <script setup>
 import { ref, onMounted, watch, nextTick } from "vue";
 
-const tabs = ["Radio", "Podcast", "Voice"];
-const activeTab = ref("Radio");
+const tabs = ["Mon village", "Radio", "Podcast"];
+const activeTab = ref("Mon village");
 
 const tabWidth = ref(0);
 const tabOffset = ref(0);
@@ -178,4 +178,4 @@ defineExpose({
     transform: translateY(0);
   }
 }
-</style> 
+</style>

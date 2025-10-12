@@ -1,0 +1,64 @@
+# PRD - Interface Carte Sociale Géolocalisée
+
+## 1. Objectif
+Développer une carte personnalisée avec :
+- Position de l'audio où l'utilisateur a posté
+- Position des radios que nous émettons avec leurs logos
+- Points d’intérêt (POI) customisés avec icônes et labels
+- Effets visuels (halo pulsant, zones d'activité colorées)
+
+---
+
+## 2. Description Fonctionnelle
+
+### 2.1 Carte de fond
+- Fournir une carte vectorielle avec design **custom** (couleurs pastel/beige, contours doux).
+- Ajouter des POI avec icônes spécifiques :
+  - Radio : icône radio + micro rouge
+  - Podcast : icône equalizer cocktail orange
+  - Lieu musical : icône Spotify verte
+- Labels POI : texte en Figtree, couleur adaptée au type (orange pour radio, marron pour podcast, etc.).
+
+### 2.2 Position utilisateur
+- Avatar circulaire avec :
+  - **Image profil** centrée
+  - Bordure rouge fine
+  - Halo radial dégradé bleu → violet (pulsant en boucle)
+- Position calculée selon coordonnées GPS
+- Animation pulsation : cycle 2 secondes en continu
+
+### 2.3 Position des radios
+- logos circulaires plus petits que celui de l’utilisateur
+- Étiquette avec nom affichée en dessous
+- Badge d’état possible (ex : ⚡ pour activité)
+
+### 2.4 Zone d’activité
+- Cercle semi-transparent rouge/orange autour d’un utilisateur pour signaler un événement
+- Opacité : 30%
+- Rayon adaptable au zoom
+
+---
+
+## 3. Interactions prévues
+- **Tap sur un avatar** → ouvre une section popup du même design que recod.vue avec les infos d'écoute cette fois 
+- **Tap sur un radio** → ouvre détails de la radio
+- **Pinch/Zoom** → géré par la carte
+- **Pan/Glisser** → déplacement libre sur la carte
+
+---
+
+## 4. Exigences UI
+- Fidélité visuelle à l’image fournie
+- Couleurs harmonisées avec la palette observée
+- Police : Figtree, taille lisible
+- Icônes POI en SVG ou PNG haute résolution
+- Respect du rapport d’échelle entre avatars, POI et labels
+
+---
+
+## 5. Critères d’acceptation
+- La position utilisateur est centrée avec halo pulsant
+- Les contacts apparaissent aux bonnes coordonnées GPS
+- Les POI sont visibles et interactifs
+- Zoom et pan fluides
+- Aucun décalage visible entre positions réelles et affichage

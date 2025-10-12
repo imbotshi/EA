@@ -1,0 +1,93 @@
+# PRD : Analyse & Résolution des Erreurs de Chargement des Flux Radio
+
+## 1. 🎯 Objectif
+Compléter l’audit précédent sur la surconsommation de ressources mobiles en se concentrant exclusivement sur les **problèmes de flux radio** (streaming audio).  
+Le but est d’identifier les causes d’erreurs de chargement ou d’interruption des streams, et de proposer une documentation claire pour améliorer la stabilité, la compatibilité et la performance du système.  
+
+---
+
+## 2. ✅ Portée
+- Analyse du mécanisme actuel de lecture des flux radio (formats, protocoles, librairies utilisées).  
+- Identification des causes d’erreurs (formats incompatibles, timeouts, surcharge réseau, mauvaises gestions des fallback).  
+- Documentation claire avec bonnes pratiques pour un **système de streaming robuste** sur mobile.  
+- Production d’un plan correctif **aligné sur le précédent PRD** (optimisation des ressources et expérience utilisateur).  
+
+---
+
+## 3. 🧩 Problèmes pressentis
+1. **Formats de flux non compatibles** (ex : `.m3u8` non supporté par certains navigateurs).  
+2. **Mauvaise gestion des erreurs réseau** (ex : perte de connexion non rattrapée).  
+3. **Timeouts non configurés** → l’utilisateur attend indéfiniment.  
+4. **Trop de requêtes simultanées** → surcharge réseau.  
+5. **Absence de fallback** vers un autre serveur/codec si le flux échoue.  
+6. **Problèmes CORS** empêchant certains flux de charger.  
+7. **Mauvaise intégration des players** (HTML5 Audio vs librairies JS custom mal configurées).  
+
+---
+
+## 4. 👤 Utilisateur cible
+- Développeur front-end gérant l’intégration des players audio.  
+- DevOps/Backend chargé de fournir les flux radio.  
+- Responsable produit qui doit garantir une lecture fluide et sans bug sur mobile.  
+
+---
+
+## 5. 🔍 Tâches demandées à Claude Sonnet 4
+### Analyse
+- Explorer la logique actuelle de lecture des flux radio.  
+- Identifier les erreurs récurrentes et leur contexte (format, navigateur, réseau, device).  
+- Évaluer la compatibilité mobile et multi-navigateurs.  
+
+### Documentation
+- Lister les problèmes identifiés avec :  
+  - **Description technique**  
+  - **Symptôme observé** (erreur affichée, blocage, silence audio, crash)  
+  - **Impact sur l’expérience utilisateur**  
+  - **Solution technique recommandée**  
+  - **Exemple de code/configuration corrigée**  
+
+### Plan de résolution
+- Étapes claires pour rendre les flux robustes.  
+- Recommandation d’outils/technos adaptés (HLS.js, Shaka Player, ExoPlayer, fallback HTML5).  
+- Plan de test (simulateur de mauvaise connexion, tests multi-device).  
+
+---
+
+## 6. 📦 Livrables attendus
+- **Rapport d’analyse** des erreurs de flux radio.  
+- **Documentation de résolution** avec check-list technique.  
+- **Recommandations de formats/protocoles** (HLS, DASH, Icecast, etc.).  
+- **Bonnes pratiques** pour mobile (reconnexion automatique, gestion de timeout, fallback).  
+
+---
+
+## 7. 📊 Format de sortie attendu
+- Markdown structuré.  
+- Tableaux comparatifs (Problème | Impact | Solution).  
+- Check-list de résolution étape par étape.  
+
+### Exemple de tableau attendu
+
+| Problème identifié | Impact utilisateur | Solution proposée |
+|--------------------|-------------------|------------------|
+| Flux `.m3u8` non supporté sur Android natif | Lecture impossible | Intégrer HLS.js comme fallback |
+| Timeout non géré | Silence infini, pas de retour d’erreur | Implémenter un timer de 10s + message d’erreur clair |
+| CORS bloqué par serveur radio | Flux inaccessible sur navigateur | Configurer le serveur avec headers `Access-Control-Allow-Origin` |
+
+---
+
+## 8. ✅ Check-list type pour chaque flux
+- [ ] Flux testé sur Chrome, Safari, Firefox (mobile & desktop)  
+- [ ] Flux testé sur Android & iOS natif  
+- [ ] Timeout correctement géré  
+- [ ] Reconnexion automatique en cas de coupure  
+- [ ] Fallback disponible si flux principal échoue  
+- [ ] Vérification CORS sur chaque serveur de flux  
+- [ ] Logs d’erreurs accessibles pour debug  
+
+---
+
+## 9. ⚡ Contraintes
+- Priorité haute : Garantir une **lecture stable et continue** des flux radio.  
+- Priorité moyenne : Documenter les compatibilités multi-device et multi-navigateurs.  
+- Priorité basse : Préparer un plan d’évolution pour supporter d’autres formats/protocoles.  

@@ -14,7 +14,6 @@
       
       <!-- Center: Title and Time -->
       <div class="header-center">
-        <h1 class="app-title">Eclairia Voice</h1>
         <div class="time-remaining">
           <span>Expire dans</span>
           <span class="time-dot">•</span>
@@ -263,4 +262,4 @@ onUnmounted(() => {
   height: 20px;
   filter: brightness(0) invert(1);
 }
-</style> 
+</style>

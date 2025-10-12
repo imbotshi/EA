@@ -1,0 +1,13 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond vert (espoir) -->
+  <rect width="48" height="48" fill="#009E60"/>
+  
+  <!-- Bande jaune (richesse) -->
+  <rect x="0" y="16" width="48" height="16" fill="#FCD116"/>
+  
+  <!-- Bande rouge (sang versé) -->
+  <rect x="0" y="32" width="48" height="16" fill="#CE1126"/>
+  
+  <!-- Étoile noire (liberté) -->
+  <path d="M24 8 L26.5 15 L34 15 L28 20 L30.5 27 L24 22 L17.5 27 L20 20 L14 15 L21.5 15 Z" fill="#000000"/>
+</svg>

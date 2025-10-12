@@ -1,0 +1,47 @@
+[
+  {
+    "id": "yeba-lessentiel",
+    "title": "L'essentiel, le podcast par Yeba",
+    "rss": "https://feed.ausha.co/ypgOZiGPP2EO"
+  },
+  {
+    "id": "mwana-villages",
+    "title": "Mwana Villages",
+    "rss": "https://feeds.buzzsprout.com/1428640.rss"
+  },
+  {
+    "id": "le-cercle-afro",
+    "title": "Le Cercle Afro",
+    "rss": "https://anchor.fm/s/f3eb8694/podcast/rss"
+  },
+  {
+    "id": "devscast-community-podcast",
+    "title": "Devscast Community Podcast",
+    "rss": "https://devscast.tech/podcasts/feed.rss"
+  },
+  {
+    "id": "afrikchine",
+    "title": "AFRIKCHINE",
+    "rss": "https://feeds.buzzsprout.com/1950385.rss"
+  },
+  {
+    "id": "radio-maarif",
+    "title": "Radio Maarif - Le podcast marocain",
+    "rss": "https://feeds.buzzsprout.com/184025.rss"
+  },
+  {
+    "id": "jeune-afrique-chronique",
+    "title": "La chronique de Jeune Afrique",
+    "rss": "https://radiofrance-podcast.net/podcast09/35099478-7c72-4f9e-a6de-1b928400e9e5/rss_24130.xml"
+  },
+  {
+    "id": "radiotamtam",
+    "title": "RadioTamTam – Les Afriques",
+    "rss": "https://anchor.fm/s/29cb6618/podcast/rss"
+  },
+  {
+    "id": "conversations-noires",
+    "title": "Conversations Noires (Afrique & diaspora)",
+    "rss": "https://anchor.fm/s/11e8405c/podcast/rss"
+  }
+]

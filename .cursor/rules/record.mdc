@@ -1,0 +1,64 @@
+# User Flow - Envoi d’un audio (Éclaireur)
+
+## Objectif
+Permettre à un utilisateur (Éclaireur) d’enregistrer et publier une note vocale géolocalisée de façon simple, rapide et intuitive.
+
+---
+
+## Étapes principales
+
+### 1. Découverte
+- L’utilisateur ouvre l’onglet "Mon Village".
+- Il arrive sur l’écran **Carte interactive**.
+- En bas au centre : bouton flottant visible en permanence "fab-record".
+
+### 2. Déclenchement
+- L’utilisateur appuie sur le bouton {fab-record}.
+- Une fenêtre d’enregistrement (overlay) s’affiche :
+  - Fond flouté.
+  - Cercle animé pulsant.
+- Deux options d’enregistrement :
+  - **Appui long** → enregistre tant que l’on maintient (WhatsApp style).
+  - **Appui simple** → démarre l’enregistrement avec un bouton Stop.
+
+### 3. Enregistrement
+- Un compteur visuel indique la durée (00:00 → max 01:00).
+- Cercle pulsant animé au rythme de la voix.
+- Bouton **X** pour annuler à tout moment.
+
+### 4. Pré-visualisation
+- Une fois l’enregistrement arrêté :
+  - Player simple (play/pause, durée).
+  - Indication de la localisation GPS → "Votre voix sera ancrée ici : [Nom du lieu]".
+- Boutons d’action :
+  - ✅ Publier
+  - ❌ Refaire
+
+### 5. Publication
+- Upload vers le backend {api/audios}.
+- Animation visuelle (onde sonore + loader).
+- Confirmation visuelle + sonore discret : "Votre voix éclaire la carte ✨".
+- Retour automatique sur la carte.
+- Nouveau **pin audio** apparaît à l’endroit exact de l’utilisateur.
+
+---
+
+## Résumé simplifié (3 taps maximum)
+1. **Carte → Appui sur fab-record**
+2. **Enregistrer → Stop → Publier**
+3. **Audio visible sur carte**
+
+---
+
+## Critères d’aisance utilisateur
+- Maximum 3 interactions entre "je veux parler" et "mon audio est publié".
+- Feedback visuel et sonore à chaque étape (pulsations, loader, confirmation).
+- Pas de saisie obligatoire (pseudo/avatar pré-remplis lors de l’onboarding).
+- Temps de publication < 5s sur connexion standard.
+
+---
+
+## Améliorations futures (V2+)
+- Notifications push : "Une nouvelle voix éclaire ton quartier".
+- Réponse vocale à un pin existant (thread audio).
+- Mode offline (enregistrer puis uploader dès connexion).

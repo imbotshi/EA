@@ -56,8 +56,8 @@ function closeModal() {
 }
 
 function handleSupport() {
-  // Afficher un message de confirmation
-  alert('Merci pour votre soutien ! Votre don de 5 000 FCFA sera traité dans les plus brefs délais.')
+  // Rediriger vers la page de donation Flutterwave
+  window.open('https://flutterwave.com/donate/l3jynwxachdx', '_blank')
   
   emit('support')
 }

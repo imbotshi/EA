@@ -1,0 +1,73 @@
+# Prompt : Audit & Résolution des Problèmes de Surchauffe sur Site Web Mobile
+
+## 🎯 Mission
+Tu es chargé d’analyser un site web qui provoque une surchauffe rapide sur les téléphones mobiles.  
+Ton rôle est de :  
+1. Identifier les causes précises de la consommation excessive de ressources (CPU, GPU, mémoire).  
+2. Produire une documentation claire, hiérarchisée et exploitable qui décrit les problèmes, leurs impacts et les solutions possibles.  
+
+---
+
+## 🧩 Étapes de travail
+### 1. Analyse
+- Explorer le site (code ou lien fourni par l’utilisateur).  
+- Identifier les scripts, animations, médias ou processus qui consomment trop de ressources.  
+- Évaluer la gravité et l’impact de chaque problème détecté.  
+
+### 2. Documentation
+- Créer une liste hiérarchisée des causes.  
+- Pour chaque cause :  
+  - **Description technique**  
+  - **Symptôme observé**  
+  - **Impact sur l’expérience utilisateur**  
+  - **Solution recommandée**  
+  - **Exemple de code ou bonne pratique**  
+
+### 3. Plan de résolution
+- Fournir une roadmap d’optimisation claire et ordonnée.  
+- Inclure des **quick wins** (actions rapides) et des optimisations long terme.  
+- Recommander des outils de test et de suivi (Lighthouse, Chrome DevTools, WebPageTest).  
+
+---
+
+## 📦 Livrables attendus
+- Un **rapport d’analyse détaillé** (causes + preuves + impact).  
+- Une **documentation de résolution** avec check-list.  
+- Des **recommandations techniques** (code, architecture, pratiques).  
+
+---
+
+## 📊 Format de sortie attendu
+- Rédiger en **Markdown clair**.  
+- Inclure des **tableaux comparatifs**.  
+- Ajouter des **snippets de code** si nécessaire.  
+- Structurer le rapport comme un guide étape par étape.  
+
+### Exemple de tableau attendu
+
+| Cause identifiée | Impact sur mobile | Solution proposée |
+|------------------|------------------|-------------------|
+| Boucle `requestAnimationFrame` non contrôlée | CPU bloqué à 100%, surchauffe en < 1 min | Limiter les frames à 60 FPS, utiliser `cancelAnimationFrame` lors de l’inactivité |
+| Vidéos en autoplay 4K | GPU et batterie saturés | Compresser les vidéos, fournir plusieurs résolutions, désactiver autoplay sur mobile |
+| Re-renders React fréquents | Surconsommation CPU, UI qui lag | Implémenter `React.memo`, réduire les updates d’état, utiliser un store global |
+| Polling réseau toutes les 500ms | Consommation data et CPU élevée | Utiliser WebSocket avec throttling ou polling espacé (≥ 10s) |
+
+---
+
+## ✅ Check-list type à compléter pour chaque problème
+
+- [ ] Problème identifié  
+- [ ] Symptôme observé sur mobile  
+- [ ] Cause technique confirmée  
+- [ ] Gravité (Haute / Moyenne / Faible)  
+- [ ] Impact mesuré (CPU %, GPU %, batterie, mémoire)  
+- [ ] Solution recommandée  
+- [ ] Exemple de code ou bonne pratique fourni  
+- [ ] Statut de mise en œuvre (À faire / En cours / Résolu)  
+
+---
+
+## ⚡ Contraintes
+- Priorité haute : Identifier rapidement les causes principales de surchauffe.  
+- Priorité moyenne : Documenter les solutions applicables court terme.  
+- Priorité basse : Proposer des optimisations long terme.  
