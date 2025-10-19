@@ -47,6 +47,14 @@ export default defineConfig({
       '/proxy': {
         target: 'http://localhost:3001',
         changeOrigin: true
+      },
+      '/audio': {
+        target: 'http://localhost:3001',
+        changeOrigin: true
+      },
+      '/comments_audio': {
+        target: 'http://localhost:3001',
+        changeOrigin: true
       }
     }
   }

@@ -1,0 +1,23 @@
+```mermaid
+flowchart LR
+  subgraph Frontend [Frontend (Vue 3 + Vite)]
+    UI[App UI]
+  end
+
+  subgraph Backend [Backend (Express API)]
+    API[REST Endpoints]
+    UP[(Uploads: audio, comments_audio)]
+    DATA[(Data: JSON files)]
+  end
+
+  subgraph External
+    RSS[Podcast RSS feeds]
+    STREAMS[Radio streams (allowlist)]
+  end
+
+  UI -- /api, /proxy, /audio, /comments_audio (via Vite proxy) --> API
+  API --> UP
+  API --> DATA
+  API -- fetch --> RSS
+  API -- proxy --> STREAMS
+```
