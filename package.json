@@ -9,7 +9,8 @@
     "dev:server": "node server.js",
     "dev:client": "cd frontend && npm run dev",
     "start": "node server.js",
-    "build": "cd frontend && npm run build",
+    "prebuild": "npm --prefix frontend ci",
+    "build": "npm --prefix frontend run build",
     "build:start": "npm run build && npm start"
   },
   "dependencies": {
