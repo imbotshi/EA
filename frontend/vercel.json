@@ -9,15 +9,16 @@
       }
     }
   ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "https://ea-gszm.onrender.com/api/$1" },
+    { "source": "/proxy", "destination": "https://ea-gszm.onrender.com/proxy" },
+    { "source": "/proxy/(.*)", "destination": "https://ea-gszm.onrender.com/proxy/$1" },
+    { "source": "/audio/(.*)", "destination": "https://ea-gszm.onrender.com/audio/$1" },
+    { "source": "/comments_audio/(.*)", "destination": "https://ea-gszm.onrender.com/comments_audio/$1" }
+  ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ],
   "env": {
     "NODE_ENV": "production"

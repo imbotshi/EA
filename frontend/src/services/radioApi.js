@@ -2,22 +2,18 @@
 // Centralizes API base detection and endpoints for the radio subsystem
 
 /**
- * Return API base for Express server. If the app is not served from the same
- * port, target localhost:3001 (default server.js port).
+ * Return API base. Always same-origin so Vercel/Render rewrites/proxies work.
+ * In dev, Vite proxy handles /api; in production, Vercel rewrites to Render.
  */
 export function getApiBase() {
   if (typeof window === 'undefined') return ''
-  const port = window.location?.port || ''
-  const host = window.location?.hostname || 'localhost'
   // In Vite dev, always use same-origin so the proxy in vite.config.js handles /api and /proxy
   try {
     // import.meta.env is replaced by Vite; optional chaining guards SSR/static analysis
     if (import.meta?.env?.DEV) return ''
   } catch {}
-  // When served by Express (build) on port 3001, use same-origin
-  if (port === '3001') return ''
-  // Fallback (e.g., opened via file:// or another port): use current hostname with API port 3001
-  return `http://${host}:3001`
+  // In production, also use same-origin; Vercel will rewrite to Render backend
+  return ''
 }
 
 /**
