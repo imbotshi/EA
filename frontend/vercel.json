@@ -14,11 +14,8 @@
     { "source": "/proxy", "destination": "https://ea-gszm.onrender.com/proxy" },
     { "source": "/proxy/(.*)", "destination": "https://ea-gszm.onrender.com/proxy/$1" },
     { "source": "/audio/(.*)", "destination": "https://ea-gszm.onrender.com/audio/$1" },
-    { "source": "/comments_audio/(.*)", "destination": "https://ea-gszm.onrender.com/comments_audio/$1" }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "source": "/comments_audio/(.*)", "destination": "https://ea-gszm.onrender.com/comments_audio/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "env": {
     "NODE_ENV": "production"

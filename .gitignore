@@ -48,3 +48,5 @@ coverage/
 # Temp
 tmp/
 temp/
+
+.vercel
