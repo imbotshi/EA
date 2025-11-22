@@ -1393,16 +1393,11 @@ const applyCustomMapStyle = () => {
     subtree: true
   })
 
-  // Appliquer le style aux labels SVG avec un délai et une surveillance continue
-  setTimeout(() => {
-    applyLabelsStylePRD()
-    // Surveiller les changements de labels en continu
-    startLabelMonitoring()
-    
-    // Ajouter les effets magiques
-    addMagicalParticles()
-  }, 2000)
-}
+    // Appliquer le style aux labels SVG avec un délai
+    setTimeout(() => {
+      applyLabelsStylePRD()
+    }, 2000)
+  }
 
 // Fonction robuste pour styliser les labels selon le PRD
 const applyLabelsStylePRD = () => {
@@ -1573,71 +1568,7 @@ const forceLabelStyling = () => {
   }
 }
 
-// Surveiller les changements de labels en continu
-const startLabelMonitoring = () => {
-  // Créer/Remplacer l'observateur de mutations
-  if (labelsObserver) {
-    try { labelsObserver.disconnect() } catch {}
-  }
-  labelsObserver = new MutationObserver((mutations) => {
-    let newLabelsFound = false
-    
-    mutations.forEach(mutation => {
-      mutation.addedNodes.forEach(node => {
-        if (node.nodeType === Node.ELEMENT_NODE) {
-          // Vérifier si c'est un nouveau label
-          if (node.tagName === 'TEXT' || node.classList.contains('leaflet-text')) {
-            newLabelsFound = true
-          }
-          
-          // Vérifier les enfants
-          const textElements = node.querySelectorAll('text')
-          textElements.forEach(text => {
-            if (text.textContent.trim().length > 1) {
-              newLabelsFound = true
-            }
-          })
-        }
-      })
-    })
-    
-    // Si de nouveaux labels sont trouvés, appliquer le style PRD
-    if (newLabelsFound) {
-      applyLabelsStylePRD()
-    }
-  })
-  
-  // Observer le conteneur de la carte
-  const mapContainer = document.querySelector('.leaflet-container')
-  if (mapContainer) {
-    labelsObserver.observe(mapContainer, {
-      childList: true,
-      subtree: true
-    })
-  }
-  
-  // Vérification périodique
-  if (labelsPeriodicCheck) {
-    try { clearInterval(labelsPeriodicCheck) } catch {}
-  }
-  labelsPeriodicCheck = setInterval(() => {
-    applyLabelsStylePRD()
-  }, 2000)
-}
 
-// Fonction pour détecter activement les labels
-const startActiveLabelDetection = () => {
-  // Vérification initiale
-  applyLabelsStylePRD()
-  
-  // Vérification périodique
-  if (labelsDetectionInterval) {
-    try { clearInterval(labelsDetectionInterval) } catch {}
-  }
-  labelsDetectionInterval = setInterval(() => {
-    applyLabelsStylePRD()
-  }, 1000)
-}
 
 // Mise à jour des marqueurs
 const updateMarkers = () => {
@@ -1880,6 +1811,9 @@ onMounted(async () => {
     startRealTimeLocationTracking()
   }
 
+  // Écouter les mises à jour des audios
+  window.addEventListener('audios-updated', handleAudiosUpdated)
+
   // Initialisation terminée
 })
 
@@ -1894,7 +1828,7 @@ onUnmounted(() => {
   try { labelsDetectionInterval && clearInterval(labelsDetectionInterval) } catch {}
 
   // Retirer l'écouteur global
-  try { window.removeEventListener('audios-updated', handleAudiosUpdated) } catch {}
+  window.removeEventListener('audios-updated', handleAudiosUpdated)
 
   // Nettoyer les éléments audio
   audioElements.forEach(audio => {
@@ -2377,57 +2311,7 @@ const createUserActivityZone = (coordinates) => {
   })
 }
 
-// Ajouter des effets de particules lumineuses flottantes (version allégée)
-const addMagicalParticles = () => {
-  // Créer un conteneur pour les particules
-  const particlesContainer = document.createElement('div')
-  particlesContainer.className = 'magical-particles-container'
-  particlesContainer.style.cssText = `
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 1000;
-    overflow: hidden;
-  `
-  
-  document.querySelector('.voice-map-container').appendChild(particlesContainer)
-  
-  // Créer seulement 3 particules subtiles au lieu de 15
-  for (let i = 0; i < 3; i++) {
-    createParticle(particlesContainer, i)
-  }
-}
 
-// Créer une particule individuelle (version allégée)
-const createParticle = (container, index) => {
-  const particle = document.createElement('div')
-  particle.className = 'magical-particle'
-  
-  // Propriétés simplifiées
-  const size = 2
-  const startX = 20 + (index * 30)
-  const startY = 20 + (index * 20)
-  const duration = 15 + (index * 5)
-  
-  // Couleur unique et subtile
-  const color = '#FFD700'
-  
-  particle.style.cssText = `
-    position: absolute;
-    width: ${size}px;
-    border-radius: 50%;
-    opacity: 0.3;
-    box-shadow: 0 0 4px ${color};
-    animation: particleFloat ${duration}s ease-in-out infinite;
-    left: ${startX}%;
-    top: ${startY}%;
-  `
-  
-  container.appendChild(particle)
-}
 
 // Ajouter des effets de lumière ambiante (version allégée)
 // const addAmbientLighting = () => {

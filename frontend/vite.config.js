@@ -18,9 +18,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['vue', 'vue-router', 'pinia'],
-          mapbox: ['mapbox-gl'],
-          three: ['three']
+          vendor: ['vue', 'vue-router', 'pinia']
         }
       }
     }
