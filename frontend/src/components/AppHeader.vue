@@ -32,12 +32,6 @@
         <img src="/alert.svg" alt="Signaler un problème" class="warning-icon" />
       </div>
     </div>
-    
-    <!-- Header Tabs Navigation -->
-    <HeaderTabs 
-      @tab-change="handleTabChange"
-      ref="headerTabsRef"
-    />
   </header>
 
   <!-- Support Modal -->
@@ -67,7 +61,6 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import SupportModal from './SupportModal.vue'
 import ReportModal from './ReportModal.vue'
 import TooltipSystem from './TooltipSystem.vue'
-import HeaderTabs from './HeaderTabs.vue'
 
 // Modal state
 const showSupportModal = ref(false)
@@ -77,10 +70,6 @@ const showReportModal = ref(false)
 const showTooltip = ref(false)
 const tooltipText = ref('')
 const tooltipPosition = ref({})
-
-// Header Tabs state
-const headerTabsRef = ref(null)
-const currentTab = ref('Radio')
 
 // Time remaining state
 const timeRemaining = ref(0)
@@ -116,16 +105,6 @@ function handleReport(reportData) {
   // Ici on pourrait envoyer le signalement à la base de données
   closeReportModal()
 }
-
-function handleTabChange(tab) {
-  currentTab.value = tab
-  console.log('Onglet actif:', tab)
-  // Émettre un événement pour informer le composant parent du changement d'onglet
-  emit('tab-change', tab)
-}
-
-// Émettre l'événement pour la communication avec le parent
-const emit = defineEmits(['tab-change'])
 
 // Time remaining functions
 function calculateTimeRemaining() {
@@ -206,6 +185,7 @@ onUnmounted(() => {
 
 .gift-icon-container:active {
   transform: scale(0.95);
+  box-shadow: 0 4px 12px rgba(255, 71, 117, 0.4);
 }
 
 .gift-icon {

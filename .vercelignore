@@ -1,0 +1,46 @@
+# Exclude non-frontend code and large/irrelevant files from deployment upload
+# Keep frontend/, vercel.json, package.json, package-lock.json
+
+# Backends and examples
+backend/
+Example/
+Erreurs/
+landingpage/
+
+# Docs and reports
+/docs/
+ECLAIRIA_PRD.md
+ECLAIRIA_MARKETING_PRD.md
+ECLAIRIA_API_PRD.md
+RAPPORT_AUDIT_FLUX_RADIO.md
+RAPPORT_AUDIT_SURCHAUFFE_MOBILE.md
+WEBRADIO.mdc
+Voice Note/
+user interface/
+validation-report.json
+countries_analysis.json
+
+# Dev/CI artifacts
+node_modules/
+frontend/node_modules/
+.venv/
+.cache/
+coverage/
+*.log
+*.cache
+
+# Temp and tools
+.tmp/
+.tmp/**
+tmp/
+temp/
+run-dev.ps1
+deploy.ps1
+
+# Tests and scripts
+/test-*.cjs
+test-all-stations.cjs
+test-streams.cjs
+
+# Vercel local project metadata is not needed in the upload
+.vercel/
