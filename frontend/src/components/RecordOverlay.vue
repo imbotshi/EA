@@ -494,10 +494,20 @@ const publishRecording = async () => {
     isRecording: isRecording.value
   })
   
-  if (!audioBlob || !userLocation.value || isPublishing.value) {
-    console.log('❌ Conditions non remplies pour publier')
+  if (!audioBlob) {
+    console.log('❌ Pas d\'audio à publier')
     return
   }
+
+  if (!userLocation.value) {
+    console.log('❌ Localisation manquante')
+    alert('Impossible de publier : la localisation est nécessaire. Veuillez autoriser la géolocalisation.')
+    // Tenter de récupérer la localisation à nouveau
+    getUserLocation()
+    return
+  }
+
+  if (isPublishing.value) return
   
   isPublishing.value = true
   
@@ -599,12 +609,16 @@ const formatTime = (seconds) => {
 
 // Démarrage instantané quand l'overlay s'ouvre
 // Désactivé le démarrage automatique de l'enregistrement
-// watch(() => props.isVisible, (newVal) => {
-//   if (newVal && !isRecording.value) {
-//     // Démarrer l'enregistrement instantanément
-//     startRecording()
-//   }
-// })
+// Surveiller la visibilité pour récupérer la localisation
+watch(() => props.isVisible, (newVal) => {
+  if (newVal) {
+    getUserLocation()
+    // Réinitialiser l'état si nécessaire
+    if (recordingState.value === 'success') {
+      recordingState.value = 'recording'
+    }
+  }
+}, { immediate: true })
 
 // Initialiser la carte
 const initMap = () => {
